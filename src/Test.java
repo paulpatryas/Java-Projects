@@ -64,7 +64,7 @@ public class Test {
 		employeesByKey.put(newEmp.getSSN(), newEmp);
 		employeesByName.add(newEmp);
 
-		System.out.println();
+		System.out.println("Employee was added: " + "" + newEmp);
 	}
 
 	//----------------------------Case 2 ------------------------------------------------------------------//
@@ -97,7 +97,6 @@ public class Test {
 		while (iterator.hasNext()) {
 			employeeDeleteIteratorRemove(delStr, iterator);
 		}
-		employeeDeleteOutputResult();
 	}
 	
 	private static Iterator<Employee> employeeDeleteIterator(HashMap<String, Employee> employeesByKey,
@@ -112,12 +111,8 @@ public class Test {
 	private static void employeeDeleteIteratorRemove(String delStr, Iterator<Employee> iterator) {
 		Employee iterEmp = iterator.next();
 		if (delStr.compareTo(iterEmp.getSSN()) == 0)
+			System.out.println("Employee was deleted: " + "" + iterEmp);
 			iterator.remove();
-	}
-	
-	private static void employeeDeleteOutputResult() {
-		System.out.println("Employee removed.");
-		System.out.println("");
 	}
 
 	//----------------------------Case 3 ------------------------------------------------------------------//

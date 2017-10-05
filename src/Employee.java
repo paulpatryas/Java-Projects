@@ -19,7 +19,7 @@ public class Employee implements Comparable<Employee> {
 	}
 
 	public String toString() {
-		return "Employee[SSN= " + ssn + ", Last Name= " + lastName + ", First Name= " + firstName + "]";
+		return "Employee[SSN = " + ssn + ", Last Name = " + lastName + ", First Name = " + firstName + "]";
 	}
 
 	public String getLastName() {
