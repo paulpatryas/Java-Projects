@@ -12,10 +12,10 @@ public class Employee implements Comparable<Employee> {
 	              .compare(this, emp);
 	}
 
-	public Employee(String socialSN, String ln, String fn) {
-		ssn = socialSN;
-		lastName = ln;
-		firstName = fn;
+	public Employee(String ssn, String lastname, String firstname) {
+		this.ssn = ssn;
+		this.lastName = lastname;
+		this.firstName = firstname;
 	}
 
 	public String toString() {
