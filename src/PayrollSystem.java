@@ -30,6 +30,7 @@ public class PayrollSystem {
 		// initialize array with Employees
 		employees[0] = salariedEmployee; 
 		
+		// print out all employees in the array (only one so far)
 		for(Employee currentEmployee: employees) {
 			System.out.println(currentEmployee);
 			System.out.printf("earned $%,.2f", currentEmployee.earnings());
