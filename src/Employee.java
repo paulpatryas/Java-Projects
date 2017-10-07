@@ -1,48 +1,59 @@
-import java.util.Comparator;
 
-public class Employee implements Comparable<Employee> {
-	private String ssn;
-	private String lastName;
+/* By: Paul Patryas
+ * Date: 07 Oct 2017
+ * Employee abstract class 
+ */
+
+public abstract class Employee {
+	
+	// create private variables
 	private String firstName;
+	private String lastName;
+	private String ssn;
 
-	public int compareTo(Employee emp) {
-		return Comparator.comparing(Employee::getFirstName)
-	              .thenComparing(Employee::getLastName)
-	              .thenComparing(Employee::getSSN)
-	              .compare(this, emp);
-	}
-
-	public Employee(String ssn, String lastname, String firstname) {
+	// Employee constructor
+	public Employee(String firstName, String lastName, String ssn) {
+		this.firstName = firstName;
+		this.lastName = lastName;
 		this.ssn = ssn;
-		this.lastName = lastname;
-		this.firstName = firstname;
 	}
-
-	public String toString() {
-		return "Employee[SSN = " + ssn + ", Last Name = " + lastName + ", First Name = " + firstName + "]";
+	// set first name
+	public void setFirstName(String firstN) {
+		firstName = firstN;
 	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
+	
+	// get first name
 	public String getFirstName() {
 		return firstName;
 	}
-
-	public String getSSN() {
+	
+	// set last name
+	public void setLastName(String lastN) {
+		lastName = lastN;
+	}
+	
+	// get last name
+	public String getLastName() {
+		return lastName;
+	}
+	
+	// set social security number 
+	public void setSocialSecurityNumber(String socialSecuirtyN) {
+		ssn = socialSecuirtyN;
+	}
+	
+	// get social security number
+	public String getSocialSecuirtyNumber() {
 		return ssn;
 	}
-
-	public void setLastName(String setLN) {
-		lastName = setLN;
+	
+	// create String representation of Employee Object
+	@Override
+	public String toString() {
+		return String.format("%s %s \nsocial security number: %s", 
+				getFirstName(), getLastName(), getSocialSecuirtyNumber());
 	}
-
-	public void setFirstName(String setFN) {
-		firstName = setFN;
-	}
-
-	public void setSSN(String setSSN) {
-		ssn = setSSN;
-	}
+		
+	// abstract method overridden by concrete subclasses        
+	public abstract double earnings(); // no implementation here
 }
