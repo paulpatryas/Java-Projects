@@ -24,7 +24,7 @@ public class PayrollSystem {
 		
 		SalariedEmployee salariedEmployee = new SalariedEmployee(firstName, lastName, ssn, weekSalary);
 		
-		 // create four-element Employee array
+		 // create one-element Employee array as an example
 		Employee[] employees = new Employee[1];
 		
 		// initialize array with Employees
