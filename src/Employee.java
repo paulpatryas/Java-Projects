@@ -51,7 +51,7 @@ public abstract class Employee {
 	@Override
 	public String toString() {
 		return String.format("%s %s \nsocial security number: %s", 
-				getFirstName(), getLastName(), getSocialSecuirtyNumber());
+		getFirstName(), getLastName(), getSocialSecuirtyNumber());
 	}
 		
 	// abstract method overridden by concrete subclasses        
